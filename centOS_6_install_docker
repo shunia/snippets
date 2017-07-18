@@ -1,0 +1,11 @@
+# 检查内核和发行版,应该是低于3的内核,并且是7以下的发行版
+uname -a
+    Linux localhost 2.6.32-573.7.1.el6.x86_64 #1 SMP Tue Sep 22 22:00:00 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+cat /etc/redhat-release
+    CentOS release 6.7 (Final)
+
+# 先安装extra packages
+sudo rpm -iUvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+
+# 在安装docker老版本 - docker-io 1.7.1
+sudo yum install -y docker-io
